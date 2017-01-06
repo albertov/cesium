@@ -74,12 +74,7 @@ define([
      */
     function buildModuleUrl(moduleID) {
         if (!defined(implementation)) {
-            //select implementation
-            if (defined(require.toUrl)) {
-                implementation = buildModuleUrlFromRequireToUrl;
-            } else {
-                implementation = buildModuleUrlFromBaseUrl;
-            }
+            implementation = buildModuleUrlFromRequireToUrl;
         }
 
         if (!defined(a)) {
